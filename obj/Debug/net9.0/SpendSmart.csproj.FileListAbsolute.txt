@@ -100,3 +100,4 @@ C:\SpendSmart\obj\Debug\net9.0\refint\SpendSmart.dll
 C:\SpendSmart\obj\Debug\net9.0\SpendSmart.pdb
 C:\SpendSmart\obj\Debug\net9.0\SpendSmart.genruntimeconfig.cache
 C:\SpendSmart\obj\Debug\net9.0\ref\SpendSmart.dll
+C:\SpendSmart\obj\Debug\net9.0\SpendSmart.sourcelink.json
