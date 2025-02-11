@@ -1,0 +1,83 @@
+@{
+    ViewData["Title"] = "Habit Tracker";
+}
+
+@model SpendSmart.Models.HabitTrackerViewModel
+
+<!-- Modal -->
+<div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">
+                    Modal title
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="CreateEditHabitsForm" asp-controller="Home">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="HabitFormModel.Id">
+                    <label class="mt-4">Habit</label>
+                    <input class="form-control" type="text" placeholder="Ex. Jogging"
+                        asp-for="HabitFormModel.HabitName">
+                    <br>
+                    <label class="mt-4">Due Date</label>
+                    <input class="form-control" type="date" asp-for="HabitFormModel.DueDate">
+                    <br>
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+                        <button class="btn btn-success px-4" type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var modalId = document.getElementById('modalId');
+
+    modalId.addEventListener('show.bs.modal', function (event) {
+        let button = event.relatedTarget;
+        let recipient = button.getAttribute('data-bs-whatever');
+    });
+</script>
+
+
+<div class="text-center">
+
+
+    <h1 class="display-4 mb-4 font-bold"><b>Habit Tracker</b></h1>
+    <div class="d-flex justify-content-between mb-4">
+        <a class="btn btn-danger btn px-4" asp-action="Index">
+            Back</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
+            Add Item
+        </button>
+    </div>
+    <div class="table-responsive rounded">
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Task</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var habit in Model.HabitItems)
+                {
+                    <tr>
+                        <td>@habit.HabitName</td>
+                        <td>@habit.DueDate</td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="CreateEditHabits" asp-route-id="@habit.Id">Edit</a>
+                            <a class="btn btn-danger" asp-action="DeleteHabits" asp-route-id="@habit.Id"> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

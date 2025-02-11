@@ -1,0 +1,111 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <strong>Hello User!</strong> You should check in on some of my ASP sample applications below! <strong>Thank
+            You</strong>
+    </div>
+
+    <img src="~/images/logo.webp" alt="Example Image" class="img-fluid mx-auto d-block p-8" width="250" />
+    <h1 class="display-5 mt-5 mb-2"><i class="fa-solid"></i><b>ASP Application</b></h1>
+    <p class="text-center fs-5 mb-3">By John Eriel Labadan</p>
+    <div class="card-body mb-5">
+        <button type="button" class="btn btn-primary btn-md mt-1 shadow-lg" data-bs-toggle="modal"
+            data-bs-target="#modalId">
+            Overview
+        </button>
+        <button type="button" class="btn btn-success btn-md mt-1 shadow-lg" data-bs-toggle="modal"
+            data-bs-target="#modalId">
+            Learn More
+        </button>
+        <div class="card mt-4">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fas fa-wallet fa-3x text-primary mb-4"></i>
+                                <h3 class="card-title">Expense Tracker</h3>
+                                <a class="btn btn-primary shadow-lg" asp-action="Expenses"><i
+                                        class="fa-solid fa-arrow-right"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-calendar-days fa-3x text-primary mb-4"></i>
+                                <h3 class="card-title">Task and Habit Tracker</h3>
+                                <a class="btn btn-primary shadow-lg" asp-action="HabitTracker"><i
+                                        class="fa-solid fa-arrow-right"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-3x fa-cart-shopping text-primary mb-4"></i>
+                                <h3 class="card-title">Buy and Sell Marketplace</h3>
+                                <a class="btn btn-primary shadow-lg" asp-action="HabitTracker"><i
+                                        class="fa-solid fa-arrow-right"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-3x fa-cart-shopping text-primary mb-4"></i>
+                                <h3 class="card-title">My Portfolio</h3>
+                                <a class="btn btn-primary shadow-lg" asp-action="HabitTracker"><i
+                                        class="fa-solid fa-arrow-right"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-3x fa-cart-shopping text-primary mb-4"></i>
+                                <h3 class="card-title">Daily Journal</h3>
+                                <a class="btn btn-primary shadow-lg" asp-action="HabitTracker"><i
+                                        class="fa-solid fa-arrow-right"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted"></div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Website Overview
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">Add rows here</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modalId = document.getElementById('modalId');
+        modalId.addEventListener('show.bs.modal', function (event) {
+            let button = event.relatedTarget;
+            let recipient = button.getAttribute('data-bs-whatever');
+        });
+    </script>
