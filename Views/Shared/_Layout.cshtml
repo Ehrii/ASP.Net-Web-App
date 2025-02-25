@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SpendSmart.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
 </head>
 
-<body class="bg-light">
+<body class="grid-bg">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white  box-shadow mb-3 p-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light shadow  box-shadow mb-3 p-3">
             <div class="container-fluid d-flex justify-content-between">
                 <div>
                     <a class="navbar-brand ms-md-5 ms-0 fs-4" asp-area="" asp-controller="Home" asp-action="Index"> <img
@@ -29,18 +32,18 @@
                     <ul class="navbar-nav flex-grow-1 ms-md-4 ms-0 fs-5 ">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i
-                                    class="fa-solid fa-home text-primary px-3"></i>Home</a>
+                                    class="fa-solid fa-diagram-project text-primary px-3"></i>My Projects</a>
                         </li>
-                        <li class="nav-item ms-md-4 ms-0 text-lg fs-5">
+                        @* <li class="nav-item ms-md-4 ms-0 text-lg fs-5">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><i
                                     class="fa-solid fa-circle-info text-primary px-3"></i>About</a>
                         </li>
                         <li class="nav-item ms-md-4 ms-0 fs-5">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><i
                                     class="fa-solid fa-shield text-primary px-3"></i>Privacy</a>
-                        </li>
+                        </li> *@
                     </ul>
-                    <div class="dropdown open ">
+                    @* <div class="dropdown open ">
                         <button class="btn btn-primary dropdown-toggle w-100 mt-2 mt-md-0" type="button" id="triggerId"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-user-circle"></i>
@@ -53,7 +56,7 @@
                                 <i class="fab fa-github"></i> Github
                             </a>
                         </div>
-                    </div>
+                    </div> *@
                 </div>
             </div>
         </nav>
@@ -64,15 +67,16 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - SpendSmart - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
+<footer class="border-top bg-light  footer text-muted">
+    <div class="container d-flex text-wrap">
+        &copy; 2025 - SpendSmart - By John Eriel Labadan
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
 
 </html>

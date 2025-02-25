@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Currency Converter";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card mb-3 mt-5" style="max-width: 100%;">
+        <div class="row g-0">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title mt-5 mb-5">Insert a currency value</h3>
+
+                    <form method="post" asp-action="ConvertCurrency">
+                        <label for="from">From Currency:</label>
+                        <select name="from" class="form-select" required>
+                            <option value="USD">USD</option>
+                            <option value=" EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="PHP">PHP</option>
+                        </select>
+
+                        <label for="to" class="form-label">To Currency:</label>
+                        <select name="to" class="form-select" required>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="PHP">PHP</option>
+                        </select>
+
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="number" name="amount" id="amount" class="form-control"
+                                placeholder="Enter amount" required step="0.01" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mb-5">Convert</button>
+                    </form>
+
+                    @if (ViewBag.Result != null)
+                    {
+                        <h3>Result: @ViewBag.Result</h3>
+                    }
+                    <label for="form-label"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

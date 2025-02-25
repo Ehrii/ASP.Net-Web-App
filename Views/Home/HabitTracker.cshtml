@@ -3,81 +3,173 @@
 }
 
 @model SpendSmart.Models.HabitTrackerViewModel
-
 <!-- Modal -->
-<div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalTitleId">
-                    Modal title
+                    Edit an Item
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form asp-action="CreateEditHabitsForm" asp-controller="Home">
                     @Html.AntiForgeryToken()
-                    <input type="hidden" asp-for="HabitFormModel.Id">
+                    <input type="hidden" id="habitId" asp-for="HabitFormModel.Id" name="HabitFormModel.Id">
+
                     <label class="mt-4">Habit</label>
-                    <input class="form-control" type="text" placeholder="Ex. Jogging"
-                        asp-for="HabitFormModel.HabitName">
+                    <select class="form-control" id="habitName" asp-for="HabitFormModel.HabitName"
+                        name="HabitFormModel.HabitName">
+                        <option value="">-- Select a Habit --</option>
+                        <option value="Jogging">Jogging</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Meditation">Meditation</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Sleeping Early">Sleeping Early</option>
+                    </select>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.HabitName"></span>
+
+
+                    <label class="mt-4">Start Date</label>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.DueDate"></span>
+                    <input class="form-control" type="date" id="dueDate" asp-for="HabitFormModel.DueDate"
+                        name="HabitFormModel.DueDate">
                     <br>
-                    <label class="mt-4">Due Date</label>
-                    <input class="form-control" type="date" asp-for="HabitFormModel.DueDate">
+
+                    <label class="mt-4">Time In</label>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.TimeIn"></span>
+                    <input class="form-control" id="timeIn" type="time" asp-for="HabitFormModel.TimeIn">
+
+                    <label class="mt-4">Time Out</label>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.TimeOut"></span>
+                    <input class="form-control" id="timeOut" type="time" asp-for="HabitFormModel.TimeOut">
                     <br>
+
                     <div class="d-flex justify-content-between">
                         <a class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
                         <button class="btn btn-success px-4" type="submit">Save</button>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
 </div>
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">
+                    Add an Item
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="CreateEditHabitsForm" asp-controller="Home">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" id="habitId" asp-for="HabitFormModel.Id" name="HabitFormModel.Id">
 
-<script>
-    var modalId = document.getElementById('modalId');
+                    <label class="mt-4">Habit </label>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.HabitName"></span>
+                    <select class="form-control" id="habitName" asp-for="HabitFormModel.HabitName"
+                        name="HabitFormModel.HabitName">
+                        <option value="">-- Select a Habit --</option>
+                        <option value="Jogging">Jogging</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Meditation">Meditation</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Sleeping Early">Sleeping Early</option>
+                    </select>
 
-    modalId.addEventListener('show.bs.modal', function (event) {
-        let button = event.relatedTarget;
-        let recipient = button.getAttribute('data-bs-whatever');
-    });
-</script>
 
+                    <label class="mt-4">Start Date</label>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.DueDate"></span>
+                    <input class="form-control" type="date" id="dueDate" asp-for="HabitFormModel.DueDate"
+                        name="HabitFormModel.DueDate" min="@DateTime.Now.ToString("yyyy-MM-dd")">
 
+                    <label class="mt-4">Time In</label>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.TimeIn"></span>
+                    <input class="form-control" id="timeIn" type="time" asp-for="HabitFormModel.TimeIn">
 
+                    <label class="mt-4">Time Out</label>
+                    <span class="text-white badge bg-danger m-2" asp-validation-for="HabitFormModel.TimeOut"></span>
+                    <input class="form-control" id="timeOut" type="time" asp-for="HabitFormModel.TimeOut">
 
-<div class="text-center">
-    <h1 class="display-4 mb-4 font-bold"><b>Habit Tracker</b></h1>
-    <div class="d-flex justify-content-between mb-4">
-        <a class="btn btn-danger btn px-4" asp-action="Index">
-            Back</a>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalId">
-            Add Item
-        </button>
+                    <br>
+
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+                        <button class="btn btn-success px-4" type="submit">Save</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
-    <div class="table-responsive rounded">
-        <table class="table table-striped">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">Task</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var habit in Model.HabitItems)
-                {
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4 mb-4  font-bold"><b>Habit Tracker</b></h1>
+    <div class="bg-white p-4 shadow rounded-3">
+
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <a class="btn btn-danger btn px-4" asp-action="Index">
+                Back</a>
+            <div class="d-flex gap-2 ">
+                <form method="get" asp-action="HabitTracker">
+                    <div class="col-auto d-flex">
+                        <input type="date" class="form-control " id="filterDate" name="selectedDate"
+                            min="@DateTime.Now.ToString("yyyy-MM-dd")" value="@Context.Request.Query["selectedDate"]">
+                        <button type="submit" class="btn btn-primary ms-2">Filter</button>
+                    </div>
+                </form>
+
+                <button type="button" class="btn btn-primary  add-habit-btn" data-bs-toggle="modal"
+                    data-bs-target="#addModal">
+                    Add Item
+                </button>
+            </div>
+        </div>
+        <div class="table-responsive rounded">
+            <table class="table table-striped">
+                <thead class="table-dark">
                     <tr>
-                        <td>@habit.HabitName</td>
-                        <td>@habit.DueDate</td>
-                        <td>
-                            <a class="btn btn-primary" asp-action="CreateEditHabits" asp-route-id="@habit.Id">Edit</a>
-                            <a class="btn btn-danger" asp-action="DeleteHabits" asp-route-id="@habit.Id"> Delete</a>
-                        </td>
+                        <th scope="col">Task</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time Start</th>
+                        <th scope="col">Time Out</th>
+
+                        <th scope="col">Actions</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var habit in Model.HabitItems)
+                    {
+                        <tr>
+                            <td>@habit.HabitName</td>
+                            <td>@habit.DueDate?.ToString("MMMM dd, yyyy")</td>
+                            <td>@habit.TimeIn</td>
+                            <td>@habit.TimeOut</td>
+
+                            <td>
+                                <a class="btn btn-primary edit-habit-btn" data-bs-toggle="modal" data-bs-target="#editModal"
+                                    data-id="@habit.Id" data-name="@habit.HabitName"
+                                    data-timein="@(habit.TimeIn?.ToString("HH\\:mm") ?? "")"
+                                    data-timeout="@(habit.TimeOut?.ToString("HH\\:mm") ?? "")"
+                                    data-date="@(habit.DueDate?.ToString("yyyy-MM-dd") ?? "")">
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" asp-action="DeleteHabits" asp-route-id="@habit.Id">
+                                    Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

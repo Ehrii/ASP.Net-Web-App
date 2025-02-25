@@ -8,9 +8,8 @@ builder.Services.AddControllersWithViews();
 
 
 builder.Services.AddDbContext<SpendSmartDBContext>(options =>
-options.UseInMemoryDatabase("SpendSmartDb")
+    options.UseSqlite("Data Source=spendsmart.db")
 );
-
 
 
 var app = builder.Build();

@@ -2,6 +2,10 @@ html {
   font-size: 14px;
 }
 
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -28,4 +32,13 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+.grid-bg {
+  /* position: relative; */
+  min-height: 100vh;
+  background-color: white;
+  background-image: linear-gradient(#F5F7F8 2px, transparent 1px),
+      linear-gradient(90deg, #F5F7F8 2px, transparent 1px);
+  background-size: 40px 40px;
 }

@@ -13,7 +13,7 @@
         <a href="#tab1Id" class="nav-link active fs-5" data-bs-toggle="tab" aria-current="page">Create and Edit</a>
     </li>
     <li class="nav-item" role="presentation">
-        <a class="nav-link fs-5" asp-action="Index" asp-controller="Home">Currency Converter</a>
+        <a class="nav-link fs-5" asp-action="CurrencyConverter" asp-controller="Home">Currency Converter</a>
     </li>
 
 </ul>
@@ -27,7 +27,6 @@
     <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
 </div>
 
-<!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
 <script>
     var triggerEl = document.querySelector("#navId a");
     bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
@@ -48,7 +47,7 @@
     <span asp-validation-for="Description" class="text-danger"></span>
     <br>
     <div class="d-flex justify-content-between">
-        <a class="btn btn-danger mt-4 page px-4" asp-action="Index">Back</a>
+        <a class="btn btn-danger mt-4 page px-4" asp-action="Expenses">Back</a>
         <button class="btn btn-success mt-4 px-4" type="submit">Save</button>
     </div>
 </form>

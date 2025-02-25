@@ -9,6 +9,18 @@ namespace SpendSmart.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly SpendSmartDBContext _context;
 
+
+        private readonly Dictionary<string, decimal> _exchangeRates = new()
+         {
+        { "USD_EUR", 0.92m },
+        { "EUR_USD", 1.09m },
+        { "USD_GBP", 0.78m },
+        { "GBP_USD", 1.28m },
+        { "USD_PHP", 58.00m },
+        { "PHP_USD", 0.018m }
+        };
+
+
         public HomeController(ILogger<HomeController> logger, SpendSmartDBContext context)
         {
             _logger = logger;
@@ -25,8 +37,8 @@ namespace SpendSmart.Controllers
 
         public IActionResult DeleteHabits(int id)
         {
-            var expenseInDb = _context.NumberofHabits.SingleOrDefault(habits => habits.Id == id);
-            _context.NumberofHabits.Remove(expenseInDb);
+            var habitsInDb = _context.NumberofHabits.SingleOrDefault(habits => habits.Id == id);
+            _context.NumberofHabits.Remove(habitsInDb);
             _context.SaveChanges();
             return RedirectToAction("HabitTracker");
         }
@@ -42,42 +54,79 @@ namespace SpendSmart.Controllers
             return View();
         }
 
-        // public IActionResult CreateEditHabits(int? id)
-        // {
-        //     if (id != null)
-        //     {
-        //         var habitsInDb = _context.NumberofHabits.SingleOrDefault(habits => habits.Id == id);
-        //         return View("HabitTracker", habitsInDb);
-        //     }
 
-        //     return RedirectToAction("HabitTracker");
-        // }
+        public IActionResult CreateEditHabits(int? id)
+        {
+
+            return View();
+
+        }
+
+        public IActionResult ConvertCurrency(string from, string to, decimal amount)
+        {
+            string key = $"{from.ToUpper()}_{to.ToUpper()}";
+            if (_exchangeRates.TryGetValue(key, out decimal rate))
+            {
+                decimal convertedAmount = amount * rate;
+                ViewBag.Result = $"{amount} {from} = {convertedAmount} {to}";
+            }
+
+            else
+            {
+                ViewBag.Result = "Exchange rate not available.";
+            }
+            return View("CurrencyConverter");
+        }
+
+        public IActionResult CurrencyConverter()
+        {
+            return View();
+        }
+
+
+        public IActionResult ViewProduct()
+        {
+            return View();
+        }
+
+
+        public IActionResult Search(string queryString)
+        {
+            var results = string.IsNullOrEmpty(queryString)
+                ? _context.Expenses.ToList()
+                : _context.Expenses.Where(t => t.Description.Contains(queryString)).ToList();
+
+            return View("Expenses", results);
+        }
 
 
 
-
-
-        //EXPENSE VIEW
         public IActionResult Expenses()
         {
-            var AllExpenses = _context.Expenses.ToList();
+            var AllExpenses = _context.Expenses?.ToList() ?? new List<Expense>();
             var totalExpenses = AllExpenses.Sum(x => x.Value);
             ViewBag.Expenses = totalExpenses;
 
             return View(AllExpenses);
         }
         //EXPENSE VIEW
-        public IActionResult HabitTracker()
+        public IActionResult HabitTracker(DateTime? selectedDate)
         {
-            var habitItems = _context.NumberofHabits?.ToList() ?? new List<Habits>();
+            var habitsQuery = _context.NumberofHabits.AsQueryable();
+
+            if (selectedDate.HasValue)
+            {
+                DateOnly selectedDateOnly = DateOnly.FromDateTime(selectedDate.Value);
+                habitsQuery = habitsQuery.Where(h => h.DueDate >= selectedDateOnly);
+            }
 
             var viewModel = new HabitTrackerViewModel
             {
-                HabitItems = habitItems,
+                HabitItems = habitsQuery.ToList(), // Assign filtered list here
                 HabitFormModel = new Habits() // Empty form model for creating new habits
             };
 
-            return View(viewModel);
+            return View(viewModel); // Pass only ONE model
         }
 
 
@@ -94,30 +143,37 @@ namespace SpendSmart.Controllers
         [HttpPost]
         public IActionResult CreateEditHabitsForm(HabitTrackerViewModel viewModel)
         {
-            if (!ModelState.IsValid)
+
+            if (viewModel.HabitFormModel.TimeIn >= viewModel.HabitFormModel.TimeOut)
             {
-                Console.WriteLine("Model is NOT valid!");
-                return View("HabitTracker", viewModel); // Reload the page with errors
+                ModelState.AddModelError("HabitFormModel.TimeOut", "Time Out must be later than Time In.");
+                viewModel.HabitItems = _context.NumberofHabits.ToList();
+                return View("HabitTracker", viewModel);
             }
+
+
             if (viewModel.HabitFormModel.Id == 0)
             {
                 // Create new habit
                 var newHabit = new Habits
                 {
                     HabitName = viewModel.HabitFormModel.HabitName,
-                    DueDate = viewModel.HabitFormModel.DueDate
-                };
+                    DueDate = viewModel.HabitFormModel.DueDate,
+                    TimeIn = viewModel.HabitFormModel.TimeIn,
+                    TimeOut = viewModel.HabitFormModel.TimeOut,
 
+                };
                 _context.NumberofHabits.Add(newHabit);
             }
             else
             {
-                // Update existing habit
                 var existingHabit = _context.NumberofHabits.Find(viewModel.HabitFormModel.Id);
                 if (existingHabit != null)
                 {
                     existingHabit.HabitName = viewModel.HabitFormModel.HabitName;
                     existingHabit.DueDate = viewModel.HabitFormModel.DueDate;
+                    existingHabit.TimeIn = viewModel.HabitFormModel.TimeIn;
+                    existingHabit.TimeOut = viewModel.HabitFormModel.TimeOut;
 
                     _context.NumberofHabits.Update(existingHabit);
                 }
@@ -131,14 +187,15 @@ namespace SpendSmart.Controllers
             return RedirectToAction("HabitTracker"); // Redirect to the main page
         }
 
+
+        public IActionResult Marketplace()
+        {
+            return View();
+        }
+
+
         public IActionResult CreateEditExpenseForm(Expense model)
         {
-            if (!ModelState.IsValid)
-            {
-                Console.WriteLine("Model is NOT valid!");
-                return View("Expenses", model); // Reload the page with errors
-            }
-
             if (model.Id == 0)
             {
                 _context.Expenses.Add(model);
