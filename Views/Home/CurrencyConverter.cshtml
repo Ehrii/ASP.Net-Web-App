@@ -13,13 +13,19 @@
 
 <body>
     <div class="card mb-3 mt-5" style="max-width: 100%;">
+        <div class="bg-primary d-flex align-items-start justify-content-start p-3 text-white">
+            <a class="btn rounded-3 fs-5 text-white bg-danger" asp-controller="Home" asp-action="Index">
+                Back
+            </a>
+        </div>
         <div class="row g-0">
-            <div class="col-md-4">
-
+            <div class="col-md-4 d-flex align-items-center" id="img-container">
+                <img src="~/images/currency.png" class="rounded-3"
+                    style="width: auto; max-width: 100%; max-height: 100%; object-fit: cover;  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h3 class="card-title mt-5 mb-5">Insert a currency value</h3>
+                    <h3 class="card-title  mt-5 mb-5">Insert a currency value</h3>
 
                     <form method="post" asp-action="ConvertCurrency">
                         <label for="from">From Currency:</label>
@@ -39,7 +45,7 @@
                         </select>
 
                         <div class="mb-3">
-                            <label for="amount" class="form-label">Amount</label>
+                            <label for="amount" class="form-label">Amount:</label>
                             <input type="number" name="amount" id="amount" class="form-control"
                                 placeholder="Enter amount" required step="0.01" />
                         </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h7MeIM2DxwAbQdNHdP9SgzY5Rhgdj+fTdHPAhHA2dKk=",
+  "Hash": "Ykwu7UEuCC60KjA2sXEqHN4WQ502EE80hSDEjZRgG/A=",
   "Source": "SpendSmart",
   "BasePath": "_content/SpendSmart",
   "Mode": "Default",
@@ -227,12 +227,12 @@
       "OriginalItemSpec": "C:\\SpendSmart\\wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-62iwvouqp9.gz",
+      "Identity": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-0ufdmti1qw.gz",
       "SourceId": "SpendSmart",
       "SourceType": "Computed",
       "ContentRoot": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/SpendSmart",
-      "RelativePath": "SpendSmart#[.{fingerprint=62iwvouqp9}]!.bundle.scp.css.gz",
+      "RelativePath": "SpendSmart#[.{fingerprint=0ufdmti1qw}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -241,8 +241,8 @@
       "RelatedAsset": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SpendSmart.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "qtyy22g4bg",
-      "Integrity": "zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=",
+      "Fingerprint": "118fe40n1x",
+      "Integrity": "ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SpendSmart.bundle.scp.css"
@@ -1046,12 +1046,12 @@
       "OriginalItemSpec": "C:\\SpendSmart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-62iwvouqp9.gz",
+      "Identity": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-0ufdmti1qw.gz",
       "SourceId": "SpendSmart",
       "SourceType": "Computed",
       "ContentRoot": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/SpendSmart",
-      "RelativePath": "SpendSmart#[.{fingerprint=62iwvouqp9}]?.styles.css.gz",
+      "RelativePath": "SpendSmart#[.{fingerprint=0ufdmti1qw}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -1060,8 +1060,8 @@
       "RelatedAsset": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SpendSmart.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "qtyy22g4bg",
-      "Integrity": "zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=",
+      "Fingerprint": "118fe40n1x",
+      "Integrity": "ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SpendSmart.styles.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "62iwvouqp9",
-      "Integrity": "kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=",
+      "Fingerprint": "0ufdmti1qw",
+      "Integrity": "mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SpendSmart.styles.css"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "62iwvouqp9",
-      "Integrity": "kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=",
+      "Fingerprint": "0ufdmti1qw",
+      "Integrity": "mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SpendSmart.bundle.scp.css"
@@ -21389,13 +21389,13 @@
       ]
     },
     {
-      "Route": "SpendSmart.62iwvouqp9.bundle.scp.css",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-62iwvouqp9.gz",
+      "Route": "SpendSmart.0ufdmti1qw.bundle.scp.css",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-0ufdmti1qw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001851851852"
+          "Quality": "0.001848428835"
         }
       ],
       "ResponseHeaders": [
@@ -21405,15 +21405,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21433,13 +21433,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "W/\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "62iwvouqp9"
+          "Value": "0ufdmti1qw"
         },
         {
           "Name": "label",
@@ -21447,12 +21447,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
     {
-      "Route": "SpendSmart.62iwvouqp9.bundle.scp.css",
+      "Route": "SpendSmart.0ufdmti1qw.bundle.scp.css",
       "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SpendSmart.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21462,7 +21462,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1132"
         },
         {
           "Name": "Content-Type",
@@ -21470,11 +21470,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21484,7 +21484,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "62iwvouqp9"
+          "Value": "0ufdmti1qw"
         },
         {
           "Name": "label",
@@ -21492,13 +21492,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
     {
-      "Route": "SpendSmart.62iwvouqp9.bundle.scp.css.gz",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-62iwvouqp9.gz",
+      "Route": "SpendSmart.0ufdmti1qw.bundle.scp.css.gz",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-0ufdmti1qw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21507,7 +21507,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "Content-Type",
@@ -21515,11 +21515,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21537,7 +21537,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "62iwvouqp9"
+          "Value": "0ufdmti1qw"
         },
         {
           "Name": "label",
@@ -21545,18 +21545,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw="
+          "Value": "sha256-ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI="
         }
       ]
     },
     {
-      "Route": "SpendSmart.62iwvouqp9.styles.css",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-62iwvouqp9.gz",
+      "Route": "SpendSmart.0ufdmti1qw.styles.css",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-0ufdmti1qw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001851851852"
+          "Quality": "0.001848428835"
         }
       ],
       "ResponseHeaders": [
@@ -21566,15 +21566,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21594,13 +21594,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "W/\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "62iwvouqp9"
+          "Value": "0ufdmti1qw"
         },
         {
           "Name": "label",
@@ -21608,12 +21608,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
     {
-      "Route": "SpendSmart.62iwvouqp9.styles.css",
+      "Route": "SpendSmart.0ufdmti1qw.styles.css",
       "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SpendSmart.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21623,7 +21623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1132"
         },
         {
           "Name": "Content-Type",
@@ -21631,11 +21631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21645,7 +21645,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "62iwvouqp9"
+          "Value": "0ufdmti1qw"
         },
         {
           "Name": "label",
@@ -21653,13 +21653,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
     {
-      "Route": "SpendSmart.62iwvouqp9.styles.css.gz",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-62iwvouqp9.gz",
+      "Route": "SpendSmart.0ufdmti1qw.styles.css.gz",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-0ufdmti1qw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21668,7 +21668,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "Content-Type",
@@ -21676,11 +21676,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21698,7 +21698,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "62iwvouqp9"
+          "Value": "0ufdmti1qw"
         },
         {
           "Name": "label",
@@ -21706,18 +21706,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw="
+          "Value": "sha256-ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI="
         }
       ]
     },
     {
       "Route": "SpendSmart.bundle.scp.css",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-62iwvouqp9.gz",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-0ufdmti1qw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001851851852"
+          "Quality": "0.001848428835"
         }
       ],
       "ResponseHeaders": [
@@ -21727,15 +21727,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21755,13 +21755,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "W/\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
@@ -21776,7 +21776,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1132"
         },
         {
           "Name": "Content-Type",
@@ -21784,11 +21784,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21798,13 +21798,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
     {
       "Route": "SpendSmart.bundle.scp.css.gz",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-62iwvouqp9.gz",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\76fcfs9blx-0ufdmti1qw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21813,7 +21813,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "Content-Type",
@@ -21821,11 +21821,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21843,18 +21843,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw="
+          "Value": "sha256-ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI="
         }
       ]
     },
     {
       "Route": "SpendSmart.styles.css",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-62iwvouqp9.gz",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-0ufdmti1qw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001851851852"
+          "Quality": "0.001848428835"
         }
       ],
       "ResponseHeaders": [
@@ -21864,15 +21864,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21892,13 +21892,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "W/\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
@@ -21913,7 +21913,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1132"
         },
         {
           "Name": "Content-Type",
@@ -21921,11 +21921,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4=\""
+          "Value": "\"mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21935,13 +21935,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kp2b8TeiVmbH9aXqadOE9FZivpd+O+HVVuUkttemvN4="
+          "Value": "sha256-mKSm/kqiyg+ZcDwazW8o+t28dhqbVfN4+OWhYwJJJ3w="
         }
       ]
     },
     {
       "Route": "SpendSmart.styles.css.gz",
-      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-62iwvouqp9.gz",
+      "AssetFile": "C:\\SpendSmart\\obj\\Debug\\net9.0\\compressed\\s03ukku3m8-0ufdmti1qw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21950,7 +21950,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "540"
         },
         {
           "Name": "Content-Type",
@@ -21958,11 +21958,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw=\""
+          "Value": "\"ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Feb 2025 00:11:59 GMT"
+          "Value": "Wed, 26 Feb 2025 00:30:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21980,7 +21980,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zm6GmsB84WgTZ2Wkmc258vJOtFtBYS2QsdT4OvCUnWw="
+          "Value": "sha256-ZfQIc36Rshcz7QuhrIpENVaZPKtlDmZ49V16aBZDiMI="
         }
       ]
     }
