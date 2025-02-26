@@ -17,7 +17,8 @@ a[b-rp5df8p200] {
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active[b-rp5df8p200], .nav-pills .show > .nav-link[b-rp5df8p200] {
+.nav-pills .nav-link.active[b-rp5df8p200],
+.nav-pills .show > .nav-link[b-rp5df8p200] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
@@ -31,7 +32,7 @@ a[b-rp5df8p200] {
 }
 
 .box-shadow[b-rp5df8p200] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
 button.accept-policy[b-rp5df8p200] {

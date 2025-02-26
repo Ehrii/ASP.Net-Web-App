@@ -4,54 +4,57 @@
 
 @model SpendSmart.Models.Expense
 
-<div class="text-center">
+
+<div class="text-center mt-5">
     <h1 class="display-4"><strong>Create and Edit Expense</strong></h1>
 </div>
 
-<ul class="nav nav-tabs" id="navId" role="tablist">
-    <li class="nav-item">
-        <a href="#tab1Id" class="nav-link active fs-5" data-bs-toggle="tab" aria-current="page">Create and Edit</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link fs-5" asp-action="CurrencyConverter" asp-controller="Home">Currency Converter</a>
-    </li>
+<div class="bg-white shadow rounded-5 p-4">
+    <ul class="nav nav-tabs" id="navId" role="tablist">
+        <li class="nav-item">
+            <a href="#tab1Id" class="nav-link active fs-5" data-bs-toggle="tab" aria-current="page">Create and Edit</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link fs-5" asp-action="CurrencyConverter" asp-controller="Home">Currency Converter</a>
+        </li>
 
-</ul>
+    </ul>
 
-<div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
+        </div>
+        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
     </div>
-    <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+
+    <script>
+        var triggerEl = document.querySelector("#navId a");
+        bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
+    </script>
+
+
+    <form asp-action="CreateEditExpenseForm" asp-controller="Home">
+        <label hidden>Id</label>
+        <input hidden class="form-control" type="number" placeholder="0" asp-for="Id">
+        <span asp-validation-for="Id" class="text-danger"></span>
+
+        <label class="mt-4">Value</label>
+        <input class="form-control" type="number" placeholder="0.00" asp-for="Value" step="0.01">
+        <span asp-validation-for="Value" class="text-danger"></span>
+
+        <br><label class="mt-4">Description</label>
+        <input class="form-control" type="text" placeholder="Ex. Bag" asp-for="Description" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <br>
+        <div class="d-flex justify-content-between">
+            <a class="btn btn-danger mt-4 page px-4" asp-action="Expenses">Back</a>
+            <button class="btn btn-success mt-4 px-4" type="submit">Save</button>
+        </div>
+    </form>
+
 </div>
-
-<script>
-    var triggerEl = document.querySelector("#navId a");
-    bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
-</script>
-
-
-<form asp-action="CreateEditExpenseForm" asp-controller="Home">
-    <label hidden>Id</label>
-    <input hidden class="form-control" type="number" placeholder="0" asp-for="Id">
-    <span asp-validation-for="Id" class="text-danger"></span>
-
-    <label class="mt-4">Value</label>
-    <input class="form-control" type="number" placeholder="0.00" asp-for="Value" step="0.01">
-    <span asp-validation-for="Value" class="text-danger"></span>
-
-    <br><label class="mt-4">Description</label>
-    <input class="form-control" type="text" placeholder="Ex. Bag" asp-for="Description" />
-    <span asp-validation-for="Description" class="text-danger"></span>
-    <br>
-    <div class="d-flex justify-content-between">
-        <a class="btn btn-danger mt-4 page px-4" asp-action="Expenses">Back</a>
-        <button class="btn btn-success mt-4 px-4" type="submit">Save</button>
-    </div>
-</form>
-
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
